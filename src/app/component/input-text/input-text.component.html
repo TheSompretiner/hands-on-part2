@@ -1,0 +1,9 @@
+<div class="form-group" [formGroup]="formGroup">
+    <label>{{label}}</label>
+    <input type="text" [formControlName]="controlName" class="form-control" (input)=" onInput($event)">
+    <div *ngIf="formGroup.get(controlName).touched">
+        <small class="form-text text-danger" *ngIf="formGroup.get(controlName).errors?.required">Must be filled</small>
+        <small class="form-text text-danger" *ngIf="formGroup.get(controlName).errors?.pattern?.requiredPattern == regexNumber">Must be number</small>
+        <small class="form-text text-danger" *ngIf="formGroup.get(controlName).errors?.email">Email is not valid</small>
+    </div>
+</div>
