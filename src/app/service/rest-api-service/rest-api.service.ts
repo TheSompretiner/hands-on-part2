@@ -11,22 +11,22 @@ export class RestApiService {
 
   getData(url) : Observable<any>
   {
-    return this.httpService.get(url);
+    return this.httpService.get(url, {observe : "response"});
   }
 
   insertData(url, data) : Observable<any>
   {
-    return this.httpService.post(url, data);
+    return this.httpService.post(url, data, {observe : "response"});
   }
 
   removeData(url) : Observable<any>
   {
-    return this.httpService.delete(url);
+    return this.httpService.delete(url, {observe : "response"});
   }
 
   updateData(url, data) : Observable<any>
   {
-    return this.httpService.put(url, data);
+    return this.httpService.put(url, data, {observe : "response"});
   }
 
 }

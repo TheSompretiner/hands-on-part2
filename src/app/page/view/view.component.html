@@ -11,7 +11,16 @@
                 <th colspan="2">Action</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody *ngIf="status == 'LOADING'"> 
+            <tr>
+                <td colspan="7">
+                      <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden"></span>
+                      </div>
+                </td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="status == 'SUCCESS'">
             <tr *ngFor="let member of memberList">
                 <td>{{member.id}}</td>
                 <td>{{member.firstName}}</td>

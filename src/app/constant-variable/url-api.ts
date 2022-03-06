@@ -1,4 +1,4 @@
-export const GET_USER = "https://testing-restapi-angular.herokuapp.com/get/users"
+export const GET_USERS = "https://testing-restapi-angular.herokuapp.com/get/users"
 export const GET_USER_BY_ID = "https://testing-restapi-angular.herokuapp.com/get/user/{id}"
 export const ADD_USER = "https://testing-restapi-angular.herokuapp.com/add/user"
 export const DELETE_USER = "https://testing-restapi-angular.herokuapp.com/delete/user/{id}" 
